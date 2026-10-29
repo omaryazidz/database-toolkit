@@ -1,0 +1,8 @@
+Target: 127.0.0.1:5433
+1. Login dari internet memakai password umum
+  [TERBUKA] login sebagai superuser 'postgres' berhasil dari luar
+  [TERBUKA] data pelanggan terbaca: Pelanggan 1 <pelanggan1@example.com>
+2. Login sebagai akun aplikasi
+  [TERBUKA] login 'appuser' berhasil dan akun ini superuser (bisa baca file server, menjalankan perintah)
+3. Koneksi terenkripsi
+  [TERBUKA] server tidak mendukung SSL: password dikirim tanpa enkripsi

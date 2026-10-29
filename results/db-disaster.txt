@@ -1,0 +1,14 @@
+1. Kondisi normal         : 2000000 pesanan (backup malam tadi berisi 2.000.000)
+2. Pesanan baru masuk     : 2000500 pesanan (500 pesanan ini TIDAK ada di backup malam)
+3. Titik waktu aman       : 2026-10-29 06:36:23+0000
+4. BENCANA: DROP TABLE orders dijalankan di production
+   Cek tabel orders       : ERROR:  relation "orders" does not exist
+5. Memulihkan ke 2026-10-29 06:36:23+0000 ...
+   Cluster   : 16/main (/var/lib/postgresql/16/main)
+   Base      : /var/backups/pg/base/20261029-063310/base.tar.gz
+   Target    : 2026-10-29 06:36:23+0000
+   Memutar ulang WAL................ selesai.
+   Cluster dipulihkan ke 2026-10-29 06:36:23+0000. Data lama disimpan di /var/lib/postgresql/16/main.before-restore-1793255794
+6. Setelah pemulihan      : 2000500 pesanan
+[PASS] semua 2.000.500 pesanan kembali, termasuk 500 yang tidak ada di backup malam
+[PASS] 500 pesanan terakhir sebelum bencana ikut pulih

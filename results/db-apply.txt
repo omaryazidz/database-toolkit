@@ -1,0 +1,47 @@
+  [FIX ] PostgreSQL tidak mendengarkan di semua interface (listen_addresses)
+  [FIX ] pg_hba.conf: tidak ada aturan 'trust' atau terbuka ke 0.0.0.0/0
+  [FIX ] Password memakai scram-sha-256 (tidak ada hash md5)
+  [FIX ] Tidak ada role aplikasi yang berstatus superuser
+  [FIX ] Log koneksi, disconnect, dan lock wait aktif
+  [FIX ] Slow query log aktif (log_min_duration_statement)
+  [FIX ] pg_stat_statements aktif untuk melacak query lambat
+  [FIX ] Memori ditala (shared_buffers >= 20% RAM, effective_cache_size >= 50%)
+  [FIX ] Checkpoint & WAL ditala (completion_target 0.9, max_wal_size >= 2GB)
+  [FIX ] Arsip WAL aktif (syarat point-in-time recovery)
+  [FIX ] Koneksi terenkripsi SSL aktif
+  [FIX ] Backup harian (dump + base backup) ada dan masih baru
+  [FIX ] Backup pernah DIUJI restore dalam 8 hari terakhir
+  [FIX ] Backup terjadwal otomatis (systemd timer)
+  [WARN] role 'appuser' tidak lagi superuser: pastikan aplikasi tetap berjalan
+  [WARN] password 'postgres' diganti, tersimpan di /var/backups/pg-setup-20261029-063227/credentials.txt. UPDATE konfigurasi aplikasi!
+  [WARN] password 'appuser' diganti, tersimpan di /var/backups/pg-setup-20261029-063227/credentials.txt. UPDATE konfigurasi aplikasi!
+[06:32:48] dump postgres: 4.0K
+[06:33:10] dump appdb: 43M
+[06:33:10] dump selesai: /var/backups/pg/dump/20261029-063247
+[06:34:13] base backup selesai: /var/backups/pg/base/20261029-063310 (57M)
+[06:34:13] checksum OK: /var/backups/pg/dump/20261029-063247
+[06:34:47] restore OK appdb.public.customers: 50000 baris (sumber: 50000)
+[06:34:49] restore OK appdb.public.orders: 2000000 baris (sumber: 2000000)
+[06:34:53] verifikasi restore lulus
+Backup konfigurasi lama: /var/backups/pg-setup-20261029-063227
+
+== Audit PostgreSQL 16 db-lab-01 (RAM 3915MB) - 29 Oct 2026 06:34:53 UTC ==
+  [PASS] PostgreSQL tidak mendengarkan di semua interface (listen_addresses)
+  [PASS] pg_hba.conf: tidak ada aturan 'trust' atau terbuka ke 0.0.0.0/0
+  [PASS] Password memakai scram-sha-256 (tidak ada hash md5)
+  [PASS] Tidak ada role aplikasi yang berstatus superuser
+  [PASS] Log koneksi, disconnect, dan lock wait aktif
+  [PASS] Slow query log aktif (log_min_duration_statement)
+  [PASS] pg_stat_statements aktif untuk melacak query lambat
+  [PASS] Memori ditala (shared_buffers >= 20% RAM, effective_cache_size >= 50%)
+  [PASS] Checkpoint & WAL ditala (completion_target 0.9, max_wal_size >= 2GB)
+  [PASS] Arsip WAL aktif (syarat point-in-time recovery)
+  [PASS] Koneksi terenkripsi SSL aktif
+  [PASS] Backup harian (dump + base backup) ada dan masih baru
+  [PASS] Backup pernah DIUJI restore dalam 8 hari terakhir
+  [PASS] Backup terjadwal otomatis (systemd timer)
+== Skor: 14/14 ==
+
+real	2m32.634s
+user	0m0.089s
+sys	0m0.282s

@@ -1,0 +1,7 @@
+Target: 127.0.0.1:5433
+1. Login dari internet memakai password umum
+  [AMAN]    ditolak: server closed the connection unexpectedly
+2. Login sebagai akun aplikasi
+  [AMAN]    ditolak: server closed the connection unexpectedly
+3. Koneksi terenkripsi
+  [AMAN]    tidak bisa dihubungi dari luar

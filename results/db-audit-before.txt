@@ -1,0 +1,16 @@
+== Audit PostgreSQL 16 db-lab-01 (RAM 3915MB) - 29 Oct 2026 06:31:50 UTC ==
+  [FAIL] PostgreSQL tidak mendengarkan di semua interface (listen_addresses)
+  [FAIL] pg_hba.conf: tidak ada aturan 'trust' atau terbuka ke 0.0.0.0/0
+  [FAIL] Password memakai scram-sha-256 (tidak ada hash md5)
+  [FAIL] Tidak ada role aplikasi yang berstatus superuser
+  [FAIL] Log koneksi, disconnect, dan lock wait aktif
+  [FAIL] Slow query log aktif (log_min_duration_statement)
+  [FAIL] pg_stat_statements aktif untuk melacak query lambat
+  [FAIL] Memori ditala (shared_buffers >= 20% RAM, effective_cache_size >= 50%)
+  [FAIL] Checkpoint & WAL ditala (completion_target 0.9, max_wal_size >= 2GB)
+  [FAIL] Arsip WAL aktif (syarat point-in-time recovery)
+  [FAIL] Koneksi terenkripsi SSL aktif
+  [FAIL] Backup harian (dump + base backup) ada dan masih baru
+  [FAIL] Backup pernah DIUJI restore dalam 8 hari terakhir
+  [FAIL] Backup terjadwal otomatis (systemd timer)
+== Skor: 0/14 ==

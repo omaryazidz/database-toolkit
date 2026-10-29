@@ -1,0 +1,7 @@
+ total_ms | calls | mean_ms  |                                   query                                    
+----------+-------+----------+----------------------------------------------------------------------------
+   110588 |   129 |   857.27 | SELECT count(*), sum(amount) FROM orders WHERE customer_id = $1
+    20321 |     1 | 20320.66 | COPY public.orders (id, customer_id, status, amount, created_at) TO stdout
+     1063 |     1 |  1063.22 | SELECT count(*) FROM public.orders
+(3 rows)
+

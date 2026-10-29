@@ -1,0 +1,3 @@
+# script bash harus LF, kalau CRLF akan error saat dijalankan di Linux
+*.sh text eol=lf
+*.txt text eol=lf

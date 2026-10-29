@@ -1,0 +1,3 @@
+A. bawaan, tanpa index                    4 query/detik   rata-rata 1012.632 ms/query   (3 pengukuran: 21 4 3)
+B. sudah ditala, tanpa index              5 query/detik   rata-rata 857.270 ms/query   (3 pengukuran: 5 5 5)
+C. ditala + index                      2811 query/detik   rata-rata 1.423 ms/query   (3 pengukuran: 2960 2749 2811)
